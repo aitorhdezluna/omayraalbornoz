@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omayra Albornoz | Especialista en Color</title>
+    <meta name="description" content="Peluquería premium especializada en color. Técnico Indola. Experiencia personalizada.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background: #FFFFFF;
+            color: #2C3E50;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.4s ease;
+        }
+
+        button {
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-family: 'Lora', serif;
+            border: none;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: white;
+            border-bottom: 1px solid #F0E6DB;
+            padding: 1.5rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #2C3E50;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            font-size: 13px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: #7E5F4E;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 0.25rem;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #9C7AA0;
+            border-bottom-color: #9C7AA0;
+        }
+
+        /* HERO */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #2C3E50;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            color: #9C7AA0;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.9;
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: #2C3E50;
+            color: white;
+            padding: 13px 40px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid #2C3E50;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            color: #2C3E50;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #2C3E50;
+            padding: 13px 40px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid #2C3E50;
+        }
+
+        .btn-secondary:hover {
+            background: #2C3E50;
+            color: white;
+        }
+
+        .hero-image {
+            background: linear-gradient(135deg, #F5F0E6 0%, #E8DDD0 100%);
+            height: 500px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* ESPECIALIDADES */
+        .especialidades {
+            padding: 6rem 4rem;
+            background: white;
+            border-top: 1px solid #F0E6DB;
+        }
+
+        .spec-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .spec-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .spec-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-weight: 400;
+            color: #2C3E50;
+            margin-bottom: 1rem;
+        }
+
+        .spec-header p {
+            font-size: 15px;
+            color: #888;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .spec-item {
+            text-align: center;
+            padding: 2rem;
+            border: 1px solid #F0E6DB;
+            border-radius: 2px;
+            transition: all 0.4s ease;
+        }
+
+        .spec-item:hover {
+            border-color: #9C7AA0;
+            background: #FAF8F6;
+        }
+
+        .spec-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #9C7AA0;
+            margin-bottom: 1rem;
+        }
+
+        .spec-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: #2C3E50;
+            margin-bottom: 0.75rem;
+            font-weight: 400;
+        }
+
+        .spec-item p {
+            font-size: 13px;
+            color: #888;
+            line-height: 1.8;
+        }
+
+        /* FILOSOFÍA */
+        .filosofia {
+            padding: 6rem 4rem;
+            background: linear-gradient(180deg, #F5F0E6 0%, #FAF8F6 100%);
+            display: flex;
+            align-items: center;
+        }
+
+        .filosofia-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .filosofia-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 400;
+            color: #2C3E50;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .filosofia-text p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+
+        .credentials {
+            display: flex;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .credential {
+            border-left: 2px solid #9C7AA0;
+            padding-left: 1.5rem;
+        }
+
+        .credential-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            color: #2C3E50;
+            margin-bottom: 0.25rem;
+            font-weight: 500;
+        }
+
+        .credential-desc {
+            font-size: 12px;
+            color: #888;
+            letter-spacing: 0.5px;
+        }
+
+        .filosofia-image {
+            background: linear-gradient(135deg, #E8DDD0 0%, #F5F0E6 100%);
+            height: 400px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* PORTAFOLIO */
+        .portafolio {
+            padding: 6rem 4rem;
+            background: white;
+            border-top: 1px solid #F0E6DB;
+        }
+
+        .portafolio-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .portafolio-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-weight: 400;
+            color: #2C3E50;
+            margin-bottom: 1rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #E8DDD0 0%, #F5F0E6 100%);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 12px;
+            text-align: center;
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        /* TESTIMONIOS */
+        .testimonios {
+            padding: 6rem 4rem;
+            background: linear-gradient(180deg, #FAF8F6 0%, #FFFFFF 100%);
+            border-top: 1px solid #F0E6DB;
+        }
+
+        .testimonios-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonios-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .testimonios-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-weight: 400;
+            color: #2C3E50;
+            margin-bottom: 1rem;
+        }
+
+        .testimonios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2.5rem;
+            border: 1px solid #F0E6DB;
+            border-radius: 2px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+            flex-grow: 1;
+        }
+
+        .testimonial-author {
+            font-family: 'Playfair Display', serif;
+            font-size: 13px;
+            color: #2C3E50;
+            font-weight: 500;
+            border-top: 1px solid #F0E6DB;
+            padding-top: 1.5rem;
+        }
+
+        /* CTA */
+        .cta-final {
+            padding: 8rem 4rem;
+            background: linear-gradient(135deg, #2C3E50 0%, #3A4B5C 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-final h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .cta-final p {
+            font-size: 16px;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .btn-light {
+            background: white;
+            color: #2C3E50;
+            padding: 13px 40px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid white;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        .btn-light:hover {
+            background: transparent;
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .contact-label {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .contact-value {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1A2332;
+            padding: 3rem 4rem;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #2C3E50;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #9C7AA0;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links a:hover {
+            color: #B68D6E;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .nav-content,
+            .hero-content,
+            .spec-container,
+            .filosofia-content,
+            .portafolio,
+            .testimonios-container,
+            .cta-final,
+            .footer-content {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            .hero-content,
+            .filosofia-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .spec-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonios-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 11px;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .spec-header h2,
+            .filosofia-text h2,
+            .portafolio-header h2,
+            .testimonios-header h2,
+            .cta-final h2 {
+                font-size: 32px;
+            }
+
+            .spec-grid,
+            .testimonios-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .credentials {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .cta-final {
+                padding: 4rem 2rem;
+            }
+
+            .hero {
+                padding-top: 140px;
+                padding-bottom: 3rem;
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-content {
+                padding: 0 1.5rem;
+            }
+
+            .hero-content {
+                padding: 0 1.5rem;
+                margin-top: 1rem;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .hero-image {
+                height: 300px;
+            }
+
+            .spec-header h2,
+            .filosofia-text h2,
+            .portafolio-header h2,
+            .testimonios-header h2,
+            .cta-final h2 {
+                font-size: 24px;
+            }
+
+            .especialidades,
+            .filosofia,
+            .portafolio,
+            .testimonios,
+            .cta-final {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">OMAYRA</div>
+            <div class="nav-links">
+                <a href="#especialidades">Especialidades</a>
+                <a href="#filosofia">Sobre mí</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#testimonios">Testimonios</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-subtitle">Técnico Indola • Especialista en Color</div>
+                <h1>Tu mejor versión en cada detalle</h1>
+                <p>Creativa, pasional y cercana. Cada transformación es una oportunidad para revelar lo mejor de ti. Trato personal, resultados excepcionales.</p>
+                <div class="hero-cta">
+                    <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })">Reservar cita</button>
+                    <button class="btn-secondary" onclick="document.getElementById('especialidades').scrollIntoView({ behavior: 'smooth' })">Descubre más</button>
+                </div>
+            </div>
+            <div class="hero-image">[Tu fotografía principal]</div>
+        </div>
+    </section>
+
+    <!-- ESPECIALIDADES -->
+    <section id="especialidades" class="especialidades">
+        <div class="spec-container">
+            <div class="spec-header">
+                <h2>Mis Especialidades</h2>
+                <p>Servicios profesionales diseñados para realzar tu naturaleza y personalidad</p>
+            </div>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <div class="spec-number">01</div>
+                    <h3>Peluquería</h3>
+                    <p>Cortes precisos que realzan tus facciones. Desde diseños clásicos hasta contemporáneos, siempre enfocado en lo que te hace sentir segura.</p>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-number">02</div>
+                    <h3>Color & Tintes</h3>
+                    <p>Experta en color con certificación Indola. Transformaciones que respetan la salud de tu cabello y realzan tu tono de piel.</p>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-number">03</div>
+                    <h3>Trabajos Técnicos</h3>
+                    <p>Alisados, ondas y tratamientos avanzados. Procesos con los mejores productos que ofrecen resultados duraderos y cuidado total.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILOSOFÍA -->
+    <section id="filosofia" class="filosofia">
+        <div class="filosofia-content">
+            <div class="filosofia-text">
+                <h2>Mi Filosofía</h2>
+                <p>No se trata solo de transformar cabello. Se trata de crear confianza. Cada cliente es único, merece trato personalizado y escucha atenta.</p>
+                <p>Mi crecimiento como profesional es tu oportunidad de brillar. La técnica y la pasión se encuentran en cada servicio que ofrezco.</p>
+                <div class="credentials">
+                    <div class="credential">
+                        <div class="credential-title">Técnico Indola</div>
+                        <div class="credential-desc">Certificada en innovación y color</div>
+                    </div>
+                    <div class="credential">
+                        <div class="credential-title">100% Satisfacción</div>
+                        <div class="credential-desc">Confianza de mis clientes</div>
+                    </div>
+                </div>
+            </div>
+            <div class="filosofia-image">[Tu fotografía personal]</div>
+        </div>
+    </section>
+
+    <!-- PORTAFOLIO -->
+    <section id="portafolio" class="portafolio">
+        <div class="portafolio-header">
+            <h2>Transformaciones</h2>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">Antes / Después</div>
+            <div class="gallery-item">Antes / Después</div>
+            <div class="gallery-item">Antes / Después</div>
+            <div class="gallery-item">Antes / Después</div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="testimonios">
+        <div class="testimonios-container">
+            <div class="testimonios-header">
+                <h2>Qué dicen mis clientes</h2>
+            </div>
+            <div class="testimonios-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">«Omayra no solo cambió mi look, cambió mi relación con el espejo. Siento que realmente entiende lo que necesito.»</p>
+                    <div class="testimonial-author">— María González</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">«Después de años buscando el color perfecto, ella lo logró a la primera. Su expertise es impresionante.»</p>
+                    <div class="testimonial-author">— Laura Torres</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">«Lo que más me fascina es el trato. Siento que cada detalle le importa. Vuelvo una y otra vez.»</p>
+                    <div class="testimonial-author">— Sofía Rodríguez</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contacto" class="cta-final">
+        <h2>Listo para tu transformación</h2>
+        <p>Cada cita es una conversación sobre ti. Descubre por qué tantas personas confían en el enfoque personal de Omayra.</p>
+        <button class="btn-light" onclick="alert('Sistema de reservas - Integrar con Calendly, WhatsApp o tu plataforma preferida')">Reservar ahora</button>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <span class="contact-label">Ubicación</span>
+                <span class="contact-value">Santa Cruz de Tenerife</span>
+            </div>
+            <div class="contact-card">
+                <span class="contact-label">Teléfono</span>
+                <span class="contact-value">+34 673 717 726</span>
+            </div>
+            <div class="contact-card">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">info@omayra.es</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Omayra Albornoz. Diseño y estrategia por Aitor Hernández</p>
+            <div class="footer-links">
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://tiktok.com" target="_blank">TikTok</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
