@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omayra Albornoz | Especialista en Color</title>
-    <meta name="description" content="Peluquería premium especializada en color. Técnico Indola. Experiencia personalizada.">
+    <title>Omayra Albornoz | Estilista Profesional para Eventos</title>
+    <meta name="description" content="Estilista profesional especializada en bodas y eventos corporativos. Peluquería y maquillaje para tus momentos especiales.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
@@ -79,7 +79,6 @@
             color: #7E5F4E;
             border-bottom: 1px solid transparent;
             padding-bottom: 0.25rem;
-            position: relative;
         }
 
         .nav-links a:hover {
@@ -181,24 +180,24 @@
             font-size: 13px;
         }
 
-        /* ESPECIALIDADES */
-        .especialidades {
+        /* SERVICIOS EVENTOS */
+        .servicios-eventos {
             padding: 6rem 4rem;
             background: white;
             border-top: 1px solid #F0E6DB;
         }
 
-        .spec-container {
+        .section-container {
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .spec-header {
+        .section-header {
             text-align: center;
             margin-bottom: 4rem;
         }
 
-        .spec-header h2 {
+        .section-header h2 {
             font-family: 'Playfair Display', serif;
             font-size: 44px;
             font-weight: 400;
@@ -206,7 +205,7 @@
             margin-bottom: 1rem;
         }
 
-        .spec-header p {
+        .section-header p {
             font-size: 15px;
             color: #888;
             max-width: 600px;
@@ -214,113 +213,111 @@
             line-height: 1.8;
         }
 
-        .spec-grid {
+        .eventos-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
+            gap: 2rem;
         }
 
-        .spec-item {
-            text-align: center;
-            padding: 2rem;
+        .evento-card {
+            background: white;
             border: 1px solid #F0E6DB;
             border-radius: 2px;
+            overflow: hidden;
             transition: all 0.4s ease;
         }
 
-        .spec-item:hover {
+        .evento-card:hover {
             border-color: #9C7AA0;
-            background: #FAF8F6;
+            box-shadow: 0 8px 24px rgba(156, 122, 160, 0.1);
         }
 
-        .spec-number {
+        .evento-header {
+            background: linear-gradient(135deg, #E8DDD0 0%, #F5F0E6 100%);
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .evento-content {
+            padding: 2rem;
+        }
+
+        .evento-icon {
             font-family: 'Playfair Display', serif;
-            font-size: 32px;
+            font-size: 28px;
             color: #9C7AA0;
             margin-bottom: 1rem;
         }
 
-        .spec-item h3 {
+        .evento-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 18px;
+            font-size: 20px;
             color: #2C3E50;
             margin-bottom: 0.75rem;
             font-weight: 400;
         }
 
-        .spec-item p {
+        .evento-card p {
             font-size: 13px;
             color: #888;
             line-height: 1.8;
-        }
-
-        /* FILOSOFÍA */
-        .filosofia {
-            padding: 6rem 4rem;
-            background: linear-gradient(180deg, #F5F0E6 0%, #FAF8F6 100%);
-            display: flex;
-            align-items: center;
-        }
-
-        .filosofia-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .filosofia-text h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 40px;
-            font-weight: 400;
-            color: #2C3E50;
             margin-bottom: 1.5rem;
-            line-height: 1.3;
         }
 
-        .filosofia-text p {
-            font-size: 15px;
-            color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.9;
-        }
-
-        .credentials {
-            display: flex;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .credential {
-            border-left: 2px solid #9C7AA0;
-            padding-left: 1.5rem;
-        }
-
-        .credential-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 16px;
-            color: #2C3E50;
-            margin-bottom: 0.25rem;
+        .evento-details {
+            font-size: 12px;
+            color: #9C7AA0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             font-weight: 500;
         }
 
-        .credential-desc {
-            font-size: 12px;
-            color: #888;
-            letter-spacing: 0.5px;
+        /* SERVICIOS ADICIONALES */
+        .servicios-adicionales {
+            padding: 4rem 4rem;
+            background: linear-gradient(180deg, #FAF8F6 0%, #FFFFFF 100%);
+            border-top: 1px solid #F0E6DB;
         }
 
-        .filosofia-image {
-            background: linear-gradient(135deg, #E8DDD0 0%, #F5F0E6 100%);
-            height: 400px;
+        .adicionales-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .adicional-item {
+            background: white;
+            padding: 2rem;
+            border: 1px solid #F0E6DB;
             border-radius: 2px;
+            border-left: 3px solid #9C7AA0;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .adicional-icon {
+            font-size: 32px;
+            min-width: 40px;
+        }
+
+        .adicional-text h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            color: #2C3E50;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .adicional-text p {
             font-size: 13px;
+            color: #888;
+            line-height: 1.7;
         }
 
         /* PORTAFOLIO */
@@ -345,7 +342,7 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
@@ -366,13 +363,81 @@
 
         .gallery-item:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        /* SOBRE OMÁ */
+        .sobre-omayra {
+            padding: 6rem 4rem;
+            background: linear-gradient(180deg, #F5F0E6 0%, #FAF8F6 100%);
+            border-top: 1px solid #F0E6DB;
+        }
+
+        .sobre-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .sobre-image {
+            background: linear-gradient(135deg, #D9C9B8 0%, #E8DDD0 100%);
+            height: 400px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 13px;
+        }
+
+        .sobre-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 400;
+            color: #2C3E50;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .sobre-text p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+
+        .credentials {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .credential {
+            border-left: 2px solid #9C7AA0;
+            padding-left: 1.5rem;
+        }
+
+        .credential-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            color: #2C3E50;
+            margin-bottom: 0.25rem;
+            font-weight: 500;
+        }
+
+        .credential-desc {
+            font-size: 12px;
+            color: #888;
+            letter-spacing: 0.5px;
         }
 
         /* TESTIMONIOS */
         .testimonios {
             padding: 6rem 4rem;
-            background: linear-gradient(180deg, #FAF8F6 0%, #FFFFFF 100%);
+            background: white;
             border-top: 1px solid #F0E6DB;
         }
 
@@ -405,6 +470,7 @@
             padding: 2.5rem;
             border: 1px solid #F0E6DB;
             border-radius: 2px;
+            border-top: 3px solid #9C7AA0;
             display: flex;
             flex-direction: column;
         }
@@ -417,6 +483,15 @@
             flex-grow: 1;
         }
 
+        .testimonial-context {
+            font-size: 11px;
+            color: #9C7AA0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
         .testimonial-author {
             font-family: 'Playfair Display', serif;
             font-size: 13px;
@@ -424,6 +499,59 @@
             font-weight: 500;
             border-top: 1px solid #F0E6DB;
             padding-top: 1.5rem;
+        }
+
+        /* PROCESO */
+        .proceso {
+            padding: 6rem 4rem;
+            background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F6 100%);
+            border-top: 1px solid #F0E6DB;
+        }
+
+        .proceso-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .proceso-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-weight: 400;
+            color: #2C3E50;
+            margin-bottom: 1rem;
+        }
+
+        .proceso-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .proceso-paso {
+            text-align: center;
+        }
+
+        .paso-numero {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 300;
+            color: #9C7AA0;
+            margin-bottom: 1rem;
+            opacity: 0.6;
+        }
+
+        .paso-titulo {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            color: #2C3E50;
+            margin-bottom: 0.75rem;
+            font-weight: 400;
+        }
+
+        .paso-desc {
+            font-size: 13px;
+            color: #888;
+            line-height: 1.7;
         }
 
         /* CTA */
@@ -473,7 +601,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
@@ -532,31 +660,33 @@
         @media (max-width: 1024px) {
             .nav-content,
             .hero-content,
-            .spec-container,
-            .filosofia-content,
-            .portafolio,
-            .testimonios-container,
-            .cta-final,
-            .footer-content {
+            .section-container,
+            .sobre-content,
+            .testimonios-container {
                 padding-left: 2rem;
                 padding-right: 2rem;
             }
 
             .hero-content,
-            .filosofia-content {
+            .sobre-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
-            .spec-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
+            .eventos-grid,
             .testimonios-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
             .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .proceso-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .adicionales-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -571,15 +701,19 @@
                 font-size: 36px;
             }
 
-            .spec-header h2,
-            .filosofia-text h2,
+            .section-header h2,
             .portafolio-header h2,
             .testimonios-header h2,
+            .proceso-header h2,
             .cta-final h2 {
                 font-size: 32px;
             }
 
-            .spec-grid,
+            .sobre-text h2 {
+                font-size: 28px;
+            }
+
+            .eventos-grid,
             .testimonios-grid {
                 grid-template-columns: 1fr;
             }
@@ -591,10 +725,6 @@
             .credentials {
                 flex-direction: column;
                 gap: 1.5rem;
-            }
-
-            .cta-final {
-                padding: 4rem 2rem;
             }
 
             .hero {
@@ -626,18 +756,20 @@
                 height: 300px;
             }
 
-            .spec-header h2,
-            .filosofia-text h2,
+            .section-header h2,
             .portafolio-header h2,
             .testimonios-header h2,
+            .proceso-header h2,
             .cta-final h2 {
                 font-size: 24px;
             }
 
-            .especialidades,
-            .filosofia,
+            .servicios-eventos,
+            .servicios-adicionales,
             .portafolio,
+            .sobre-omayra,
             .testimonios,
+            .proceso,
             .cta-final {
                 padding: 3rem 1.5rem;
             }
@@ -651,6 +783,14 @@
                 width: 100%;
                 text-align: center;
             }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .proceso-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -661,10 +801,10 @@
         <div class="nav-content">
             <div class="logo">OMAYRA</div>
             <div class="nav-links">
-                <a href="#especialidades">Especialidades</a>
-                <a href="#filosofia">Sobre mí</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#servicios">Servicios</a>
                 <a href="#portafolio">Portafolio</a>
-                <a href="#testimonios">Testimonios</a>
+                <a href="#sobre">Sobre mí</a>
                 <a href="#contacto">Contacto</a>
             </div>
         </div>
@@ -674,77 +814,131 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <div class="hero-subtitle">Técnico Indola • Especialista en Color</div>
-                <h1>Tu mejor versión en cada detalle</h1>
-                <p>Creativa, pasional y cercana. Cada transformación es una oportunidad para revelar lo mejor de ti. Trato personal, resultados excepcionales.</p>
+                <div class="hero-subtitle">Técnico Indola • Estilista Profesional</div>
+                <h1>Tu estilista en los momentos que importan</h1>
+                <p>Especializada en bodas, eventos corporativos y sesiones fotográficas. Transformaciones que reflejan tu esencia en cada detalle.</p>
                 <div class="hero-cta">
-                    <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })">Reservar cita</button>
-                    <button class="btn-secondary" onclick="document.getElementById('especialidades').scrollIntoView({ behavior: 'smooth' })">Descubre más</button>
+                    <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })">Consultar disponibilidad</button>
+                    <button class="btn-secondary" onclick="document.getElementById('eventos').scrollIntoView({ behavior: 'smooth' })">Ver servicios</button>
                 </div>
             </div>
-            <div class="hero-image">[Tu fotografía principal]</div>
+            <div class="hero-image">[Tu fotografía - Evento destacado]</div>
         </div>
     </section>
 
-    <!-- ESPECIALIDADES -->
-    <section id="especialidades" class="especialidades">
-        <div class="spec-container">
-            <div class="spec-header">
-                <h2>Mis Especialidades</h2>
-                <p>Servicios profesionales diseñados para realzar tu naturaleza y personalidad</p>
+    <!-- SERVICIOS DE EVENTOS -->
+    <section id="eventos" class="servicios-eventos">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Servicios para Eventos</h2>
+                <p>Especializada en crear looks memorables para tus momentos más especiales</p>
             </div>
-            <div class="spec-grid">
-                <div class="spec-item">
-                    <div class="spec-number">01</div>
-                    <h3>Peluquería</h3>
-                    <p>Cortes precisos que realzan tus facciones. Desde diseños clásicos hasta contemporáneos, siempre enfocado en lo que te hace sentir segura.</p>
+            <div class="eventos-grid">
+                <div class="evento-card">
+                    <div class="evento-header">[Foto evento]</div>
+                    <div class="evento-content">
+                        <div class="evento-icon">💍</div>
+                        <h3>Bodas</h3>
+                        <p>Novia, damas de honor y convidadas. Peinados y estilos que permanecen perfectos durante toda la celebración.</p>
+                        <div class="evento-details">Paquetes personalizados</div>
+                    </div>
                 </div>
-                <div class="spec-item">
-                    <div class="spec-number">02</div>
-                    <h3>Color & Tintes</h3>
-                    <p>Experta en color con certificación Indola. Transformaciones que respetan la salud de tu cabello y realzan tu tono de piel.</p>
+                <div class="evento-card">
+                    <div class="evento-header">[Foto evento]</div>
+                    <div class="evento-content">
+                        <div class="evento-icon">🎤</div>
+                        <h3>Eventos Corporativos</h3>
+                        <p>Conferencias, galas y actos empresariales. Look profesional que proyecta confianza y elegancia.</p>
+                        <div class="evento-details">Para individuos y equipos</div>
+                    </div>
                 </div>
-                <div class="spec-item">
-                    <div class="spec-number">03</div>
-                    <h3>Trabajos Técnicos</h3>
-                    <p>Alisados, ondas y tratamientos avanzados. Procesos con los mejores productos que ofrecen resultados duraderos y cuidado total.</p>
+                <div class="evento-card">
+                    <div class="evento-header">[Foto evento]</div>
+                    <div class="evento-content">
+                        <div class="evento-icon">📸</div>
+                        <h3>Sesiones Fotográficas</h3>
+                        <p>Peinado y styling para sesiones profesionales. Tu mejor versión ante la cámara.</p>
+                        <div class="evento-details">Shoots y producciones</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FILOSOFÍA -->
-    <section id="filosofia" class="filosofia">
-        <div class="filosofia-content">
-            <div class="filosofia-text">
-                <h2>Mi Filosofía</h2>
-                <p>No se trata solo de transformar cabello. Se trata de crear confianza. Cada cliente es único, merece trato personalizado y escucha atenta.</p>
-                <p>Mi crecimiento como profesional es tu oportunidad de brillar. La técnica y la pasión se encuentran en cada servicio que ofrezco.</p>
-                <div class="credentials">
-                    <div class="credential">
-                        <div class="credential-title">Técnico Indola</div>
-                        <div class="credential-desc">Certificada en innovación y color</div>
+    <!-- SERVICIOS ADICIONALES -->
+    <section id="servicios" class="servicios-adicionales">
+        <div class="section-container">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 40px; text-align: center; margin-bottom: 3rem; font-weight: 400;">Servicios Complementarios</h2>
+            <div class="adicionales-grid">
+                <div class="adicional-item">
+                    <div class="adicional-icon">🏠</div>
+                    <div class="adicional-text">
+                        <h4>Servicio a Domicilio</h4>
+                        <p>Te visitamos en tu casa, hotel o lugar elegido. Comodidad y flexibilidad para tu preparación.</p>
                     </div>
-                    <div class="credential">
-                        <div class="credential-title">100% Satisfacción</div>
-                        <div class="credential-desc">Confianza de mis clientes</div>
+                </div>
+                <div class="adicional-item">
+                    <div class="adicional-icon">👰</div>
+                    <div class="adicional-text">
+                        <h4>Prueba Previa</h4>
+                        <p>Reunión de consultoría para perfeccionar el look. Aseguramos que todo esté exactamente como deseas.</p>
+                    </div>
+                </div>
+                <div class="adicional-item">
+                    <div class="adicional-icon">💄</div>
+                    <div class="adicional-text">
+                        <h4>Peluquería & Color</h4>
+                        <p>Desde cortes hasta transformaciones de color. Técnica Indola para resultados excepcionales.</p>
+                    </div>
+                </div>
+                <div class="adicional-item">
+                    <div class="adicional-icon">✨</div>
+                    <div class="adicional-text">
+                        <h4>Retoque el Día</h4>
+                        <p>Disponible durante el evento para ajustes y retoques. Tu look perfecto de inicio a fin.</p>
                     </div>
                 </div>
             </div>
-            <div class="filosofia-image">[Tu fotografía personal]</div>
         </div>
     </section>
 
     <!-- PORTAFOLIO -->
     <section id="portafolio" class="portafolio">
         <div class="portafolio-header">
-            <h2>Transformaciones</h2>
+            <h2>Portafolio de Eventos</h2>
         </div>
         <div class="gallery">
-            <div class="gallery-item">Antes / Después</div>
-            <div class="gallery-item">Antes / Después</div>
-            <div class="gallery-item">Antes / Después</div>
-            <div class="gallery-item">Antes / Después</div>
+            <div class="gallery-item">Boda - Peinado novia</div>
+            <div class="gallery-item">Evento corporativo</div>
+            <div class="gallery-item">Sesión fotográfica</div>
+            <div class="gallery-item">Boda - Damas honor</div>
+            <div class="gallery-item">Evento especial</div>
+            <div class="gallery-item">Producción profesional</div>
+        </div>
+    </section>
+
+    <!-- SOBRE OMAYRA -->
+    <section id="sobre" class="sobre-omayra">
+        <div class="section-container">
+            <div class="sobre-content">
+                <div class="sobre-image">[Tu fotografía profesional]</div>
+                <div class="sobre-text">
+                    <h2>Quién es Omayra</h2>
+                    <p>Estilista profesional con especialización en eventos. Creativa, pasional y cercana, transformo momentos ordinarios en experiencias extraordinarias.</p>
+                    <p>Mi enfoque es entender qué deseas proyectar. No es solo un peinado, es tu confianza, tu esencia reflejada en cada evento importante de tu vida.</p>
+                    <p>Técnico Indola certificada. Experiencia en bodas, eventos corporativos y producciones fotográficas. Cada proyecto es único, cada cliente merece atención personalizada.</p>
+                    <div class="credentials">
+                        <div class="credential">
+                            <div class="credential-title">Técnico Indola</div>
+                            <div class="credential-desc">Experta en color y transformación</div>
+                        </div>
+                        <div class="credential">
+                            <div class="credential-title">+50 Eventos</div>
+                            <div class="credential-desc">Bodas, galas y producciones</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -752,20 +946,54 @@
     <section id="testimonios" class="testimonios">
         <div class="testimonios-container">
             <div class="testimonios-header">
-                <h2>Qué dicen mis clientes</h2>
+                <h2>Historias de Clientes</h2>
             </div>
             <div class="testimonios-grid">
                 <div class="testimonial">
-                    <p class="testimonial-text">«Omayra no solo cambió mi look, cambió mi relación con el espejo. Siento que realmente entiende lo que necesito.»</p>
-                    <div class="testimonial-author">— María González</div>
+                    <div class="testimonial-context">Boda • Junio 2024</div>
+                    <p class="testimonial-text">«Omayra hizo que mi día especial fuera aún más especial. Mi peinado se mantuvo perfecto de inicio a fin. Profesional, atenta y con un toque personal que no olvidaré.»</p>
+                    <div class="testimonial-author">— Isabel (Novia)</div>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-text">«Después de años buscando el color perfecto, ella lo logró a la primera. Su expertise es impresionante.»</p>
-                    <div class="testimonial-author">— Laura Torres</div>
+                    <div class="testimonial-context">Evento Corporativo • Abril 2024</div>
+                    <p class="testimonial-text">«Contratamos a Omayra para una gala empresarial. Su versatilidad y profesionalismo fueron impecables. Nuestras ejecutivas lucieron increíbles y seguras.»</p>
+                    <div class="testimonial-author">— Jorge (Organizador)</div>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-text">«Lo que más me fascina es el trato. Siento que cada detalle le importa. Vuelvo una y otra vez.»</p>
-                    <div class="testimonial-author">— Sofía Rodríguez</div>
+                    <div class="testimonial-context">Sesión Fotográfica • Marzo 2024</div>
+                    <p class="testimonial-text">«Sabía que mi peinado sería perfecto con Omayra. Su expertise en frente a cámara y color es insuperable. Los resultados hablan por sí solos.»</p>
+                    <div class="testimonial-author">— María (Modelo)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="proceso">
+        <div class="section-container">
+            <div class="proceso-header">
+                <h2>Cómo Trabajamos</h2>
+            </div>
+            <div class="proceso-grid">
+                <div class="proceso-paso">
+                    <div class="paso-numero">01</div>
+                    <div class="paso-titulo">Consulta Inicial</div>
+                    <div class="paso-desc">Te escuchamos, entendemos tu visión y presupuesto</div>
+                </div>
+                <div class="proceso-paso">
+                    <div class="paso-numero">02</div>
+                    <div class="paso-titulo">Prueba Previa</div>
+                    <div class="paso-desc">Perfeccionamos el look en una sesión privada</div>
+                </div>
+                <div class="proceso-paso">
+                    <div class="paso-numero">03</div>
+                    <div class="paso-titulo">Día del Evento</div>
+                    <div class="paso-desc">Te preparamos con cuidado y profesionalismo</div>
+                </div>
+                <div class="proceso-paso">
+                    <div class="paso-numero">04</div>
+                    <div class="paso-titulo">Retoque & Apoyo</div>
+                    <div class="paso-desc">Disponible durante el evento para ajustes</div>
                 </div>
             </div>
         </div>
@@ -773,9 +1001,9 @@
 
     <!-- CTA FINAL -->
     <section id="contacto" class="cta-final">
-        <h2>Listo para tu transformación</h2>
-        <p>Cada cita es una conversación sobre ti. Descubre por qué tantas personas confían en el enfoque personal de Omayra.</p>
-        <button class="btn-light" onclick="alert('Sistema de reservas - Integrar con Calendly, WhatsApp o tu plataforma preferida')">Reservar ahora</button>
+        <h2>Tu Estilista para el Gran Día</h2>
+        <p>¿Tienes un evento especial? Hablemos sobre cómo puedo hacer que luzcas y te sientas impecable en el momento que importa.</p>
+        <button class="btn-light" onclick="alert('Integrar con WhatsApp, Calendly o formulario de contacto')">Solicitar presupuesto</button>
         <div class="contact-grid">
             <div class="contact-card">
                 <span class="contact-label">Ubicación</span>
@@ -795,11 +1023,11 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
-            <p>© 2026 Omayra Albornoz. Diseño y estrategia por Aitor Hernández</p>
+            <p>© 2026 Omayra Albornoz | Estilista Profesional para Eventos</p>
             <div class="footer-links">
                 <a href="https://instagram.com" target="_blank">Instagram</a>
                 <a href="https://tiktok.com" target="_blank">TikTok</a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://whatsapp.com" target="_blank">WhatsApp</a>
             </div>
         </div>
     </footer>
