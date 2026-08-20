@@ -11,14 +11,14 @@
   <style>
     :root {
       --brand:#E88C9D;
-      --brand-dark:#C96F81;
+      --brand-dark:#B95F73;
+      --brand-deep:#8F4455;
       --brand-soft:#FCEDEF;
-      --ink:#2C3E50;
-      --ink-deep:#1A2332;
-      --text:#666;
-      --muted:#888;
-      --line:#F0E6DB;
-      --warm:#FAF8F6;
+      --ink:#111111;
+      --text:#3F3F3F;
+      --muted:#747474;
+      --line:#E9DFE1;
+      --warm:#FAF7F7;
       --white:#fff;
     }
     *{margin:0;padding:0;box-sizing:border-box}
@@ -32,7 +32,7 @@
     .logo{display:inline-flex;align-items:center}
     .logo img{display:block;width:126px;height:auto}
     .nav-links{display:flex;gap:3rem;font-size:13px;letter-spacing:.8px;text-transform:uppercase}
-    .nav-links a{color:#7E5F4E;border-bottom:1px solid transparent;padding-bottom:.25rem}
+    .nav-links a{color:var(--ink);border-bottom:1px solid transparent;padding-bottom:.25rem}
     .nav-links a:hover{color:var(--brand-dark);border-bottom-color:var(--brand)}
 
     .hero{padding:120px 0 80px;background:linear-gradient(180deg,#fff 0%,var(--warm) 100%);min-height:100vh;display:flex;align-items:center}
@@ -42,16 +42,16 @@
     .hero p{font-size:16px;color:var(--text);line-height:1.9;margin-bottom:2.5rem;max-width:550px}
     .hero-cta{display:flex;gap:1rem;align-items:center}
     .btn-primary,.btn-secondary,.btn-light{padding:13px 40px;font-size:12px;letter-spacing:1px;text-transform:uppercase;display:inline-block}
-    .btn-primary{background:var(--brand);color:#fff;border:1px solid var(--brand)}
-    .btn-primary:hover{background:var(--brand-dark);border-color:var(--brand-dark)}
+    .btn-primary{background:var(--brand);color:#111;border:1px solid var(--brand)}
+    .btn-primary:hover{background:var(--brand-dark);border-color:var(--brand-dark);color:#fff}
     .btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--ink)}
     .btn-secondary:hover{background:var(--ink);color:#fff}
-    .hero-image{background:linear-gradient(135deg,#F5F0E6 0%,#E8DDD0 100%);height:500px;border-radius:2px;display:flex;align-items:center;justify-content:center;color:#999;font-size:13px;position:relative;overflow:hidden}
+    .hero-image{background:linear-gradient(135deg,#F7EEEE 0%,#F0E0E4 100%);height:500px;border-radius:2px;display:flex;align-items:center;justify-content:center;color:#777;font-size:13px;position:relative;overflow:hidden}
     .hero-image:after{content:'';position:absolute;width:110px;height:110px;right:-45px;bottom:-45px;border:1px solid rgba(232,140,157,.6);border-radius:50%}
 
     .section{padding:6rem 4rem;border-top:1px solid var(--line)}
     .section.alt{background:linear-gradient(180deg,var(--warm) 0%,#fff 100%)}
-    .section.about{background:linear-gradient(180deg,#F5F0E6 0%,var(--warm) 100%)}
+    .section.about{background:linear-gradient(180deg,#FCEDEF 0%,var(--warm) 100%)}
     .container{max-width:1200px;margin:auto}
     .section-header{text-align:center;margin-bottom:4rem}
     .section-header h2,.portfolio-header h2,.testimonials-header h2,.process-header h2{font-family:'Playfair Display',serif;font-size:44px;font-weight:400;color:var(--ink);margin-bottom:1rem}
@@ -60,8 +60,8 @@
 
     .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
     .event-card{background:#fff;border:1px solid var(--line);border-radius:2px;overflow:hidden;transition:.4s ease}
-    .event-card:hover{border-color:rgba(232,140,157,.75);box-shadow:0 10px 30px rgba(44,62,80,.08);transform:translateY(-3px)}
-    .event-photo{background:linear-gradient(135deg,#E8DDD0 0%,#F5F0E6 100%);height:180px;display:flex;align-items:center;justify-content:center;color:#999;font-size:14px}
+    .event-card:hover{border-color:rgba(232,140,157,.75);box-shadow:0 10px 30px rgba(17,17,17,.08);transform:translateY(-3px)}
+    .event-photo{background:linear-gradient(135deg,#F7EEEE 0%,#F0E0E4 100%);height:180px;display:flex;align-items:center;justify-content:center;color:#777;font-size:14px}
     .event-content{padding:2rem}
     .event-icon{font-size:28px;margin-bottom:1rem}
     .event-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;margin-bottom:.75rem}
@@ -77,11 +77,11 @@
 
     .portfolio-header,.testimonials-header,.process-header{text-align:center;margin-bottom:4rem}
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
-    .gallery-item{aspect-ratio:1;background:linear-gradient(135deg,#E8DDD0 0%,#F5F0E6 100%);display:flex;align-items:center;justify-content:center;color:#999;font-size:12px;text-align:center;padding:2rem;transition:.4s ease}
+    .gallery-item{aspect-ratio:1;background:linear-gradient(135deg,#F7EEEE 0%,#F0E0E4 100%);display:flex;align-items:center;justify-content:center;color:#777;font-size:12px;text-align:center;padding:2rem;transition:.4s ease}
     .gallery-item:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
 
     .about-content{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-    .about-image{background:linear-gradient(135deg,#D9C9B8 0%,#E8DDD0 100%);height:400px;display:flex;align-items:center;justify-content:center;color:#999;font-size:13px;border-bottom:4px solid var(--brand)}
+    .about-image{background:linear-gradient(135deg,#F2D8DE 0%,#F8E9EC 100%);height:400px;display:flex;align-items:center;justify-content:center;color:#777;font-size:13px;border-bottom:4px solid var(--brand)}
     .about-text h2{font-family:'Playfair Display',serif;font-size:40px;font-weight:400;line-height:1.3;margin-bottom:1.5rem}
     .about-text p{font-size:15px;color:var(--text);margin-bottom:1.5rem;line-height:1.9}
     .credentials{display:flex;gap:2rem;margin-top:2rem}
@@ -92,31 +92,34 @@
     .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
     .testimonial{background:#fff;padding:2.5rem;border:1px solid var(--line);border-top:3px solid var(--brand);display:flex;flex-direction:column}
     .testimonial-context{font-size:11px;color:var(--brand-dark);text-transform:uppercase;letter-spacing:.5px;margin-bottom:1rem;font-weight:500}
-    .testimonial-text{font-size:14px;color:#555;margin-bottom:1.5rem;line-height:1.9;flex-grow:1}
+    .testimonial-text{font-size:14px;color:#333;margin-bottom:1.5rem;line-height:1.9;flex-grow:1}
     .testimonial-author{font-family:'Playfair Display',serif;font-size:13px;font-weight:500;border-top:1px solid var(--line);padding-top:1.5rem}
 
     .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
     .process-step{text-align:center}
-    .step-number{font-family:'Playfair Display',serif;font-size:48px;font-weight:300;color:var(--brand);margin-bottom:1rem;opacity:.72}
+    .step-number{font-family:'Playfair Display',serif;font-size:48px;font-weight:300;color:var(--brand);margin-bottom:1rem;opacity:.82}
     .step-title{font-family:'Playfair Display',serif;font-size:16px;margin-bottom:.75rem}
     .step-desc{font-size:13px;color:var(--muted);line-height:1.7}
 
-    .cta{padding:8rem 4rem;background:linear-gradient(135deg,var(--ink) 0%,#3A4B5C 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
-    .cta:before{content:'';position:absolute;width:360px;height:360px;border-radius:50%;background:rgba(232,140,157,.1);right:-140px;top:-190px}
+    .cta{padding:8rem 4rem;background:linear-gradient(135deg,#F6D5DC 0%,#E88C9D 100%);color:#111;text-align:center;position:relative;overflow:hidden}
+    .cta:before{content:'';position:absolute;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,.22);right:-140px;top:-190px}
     .cta h2{font-family:'Playfair Display',serif;font-size:44px;font-weight:400;margin-bottom:1.5rem;position:relative}
-    .cta p{font-size:16px;margin:0 auto 3rem;max-width:620px;line-height:1.8;opacity:.95;position:relative}
-    .btn-light{background:var(--brand);color:#fff;border:1px solid var(--brand);margin-bottom:3rem;position:relative}
-    .btn-light:hover{background:transparent;border-color:#fff}
-    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:700px;margin:auto;position:relative}
-    .contact-card{background:rgba(255,255,255,.08);padding:2rem;border:1px solid rgba(255,255,255,.15)}
+    .cta p{font-size:16px;margin:0 auto 3rem;max-width:620px;line-height:1.8;position:relative;color:#242424}
+    .btn-light{background:#111;color:#fff;border:1px solid #111;margin-bottom:3rem;position:relative}
+    .btn-light:hover{background:transparent;color:#111}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:760px;margin:auto;position:relative}
+    .contact-card{background:rgba(255,255,255,.34);padding:2rem;border:1px solid rgba(255,255,255,.58)}
     .contact-label{font-family:'Playfair Display',serif;font-size:14px;margin-bottom:.5rem;display:block}
-    .contact-value{font-size:12px;opacity:.9}
+    .contact-value{font-size:12px;color:#222}
 
-    footer{background:var(--ink-deep);padding:2.5rem 4rem 3rem;text-align:center;font-size:12px;color:#999;border-top:1px solid var(--ink)}
-    .footer-logo{width:96px;height:auto;margin-bottom:1rem;opacity:.95}
-    .footer-links{display:flex;justify-content:center;gap:2rem;margin-top:1.5rem}
-    .footer-links a{color:var(--brand);font-size:12px;letter-spacing:.5px}
-    .footer-links a:hover{color:#fff}
+    footer{background:linear-gradient(180deg,var(--brand) 0%,var(--brand-dark) 100%);padding:2.75rem 4rem 2.5rem;text-align:center;font-size:12px;color:#111;border-top:1px solid rgba(0,0,0,.08)}
+    .footer-logo{width:96px;height:auto;margin-bottom:1rem;filter:brightness(0);opacity:.9}
+    .footer-links{display:flex;justify-content:center;gap:2rem;margin-top:1.5rem;flex-wrap:wrap}
+    .footer-links a{color:#111;font-size:12px;letter-spacing:.5px;border-bottom:1px solid rgba(17,17,17,.25)}
+    .footer-links a:hover{color:#fff;border-bottom-color:#fff}
+    .footer-credit{margin-top:1.5rem;font-size:11px;color:rgba(17,17,17,.78)}
+    .footer-credit a{font-weight:500;border-bottom:1px solid rgba(17,17,17,.28)}
+    .footer-credit a:hover{color:#fff;border-bottom-color:#fff}
 
     @media(max-width:1024px){.nav-content,.hero-content,.container{padding-left:2rem;padding-right:2rem}.hero-content,.about-content{grid-template-columns:1fr}.events-grid,.testimonials-grid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:1fr}}
     @media(max-width:768px){.nav-links{gap:1.5rem;font-size:11px}.logo img{width:110px}.hero h1{font-size:36px}.section-header h2,.portfolio-header h2,.testimonials-header h2,.process-header h2,.cta h2{font-size:32px}.about-text h2{font-size:28px}.events-grid,.testimonials-grid,.contact-grid{grid-template-columns:1fr}.credentials{flex-direction:column;gap:1.5rem}.hero{padding-top:140px;min-height:auto}}
@@ -220,10 +223,10 @@
   <section id="contacto" class="cta">
     <h2>Tu Estilista para el Gran Día</h2>
     <p>¿Tienes un evento especial o quieres transformar tu cabello? Hablemos sobre el resultado que buscas y cómo podemos llevarlo a cabo.</p>
-    <button class="btn-light" onclick="alert('Integrar con WhatsApp, Calendly o formulario de contacto')">Solicitar presupuesto</button>
+    <a class="btn-light" href="https://wa.me/34673717726" target="_blank" rel="noopener noreferrer">Solicitar presupuesto</a>
     <div class="contact-grid">
-      <div class="contact-card"><span class="contact-label">Ubicación</span><span class="contact-value">Santa Cruz de Tenerife</span></div>
-      <div class="contact-card"><span class="contact-label">Teléfono</span><span class="contact-value">+34 673 717 726</span></div>
+      <div class="contact-card"><span class="contact-label">Ubicación</span><span class="contact-value">San Cristóbal de La Laguna</span></div>
+      <div class="contact-card"><span class="contact-label">Teléfono</span><a class="contact-value" href="tel:+34673717726">+34 673 717 726</a></div>
       <div class="contact-card"><span class="contact-label">Email</span><span class="contact-value">info@omayra.es</span></div>
     </div>
   </section>
@@ -231,7 +234,11 @@
   <footer>
     <img class="footer-logo" src="assets/logo-omayra-rosado.svg" alt="Omayra Albornoz">
     <p>© 2026 Omayra Albornoz | Estilista Profesional</p>
-    <div class="footer-links"><a href="https://instagram.com" target="_blank">Instagram</a><a href="https://tiktok.com" target="_blank">TikTok</a><a href="https://whatsapp.com" target="_blank">WhatsApp</a></div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/omayraalbornoz.estilista/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://wa.me/34673717726" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+    <p class="footer-credit">Web realizada por <a href="https://www.aitorhernandez.es" target="_blank" rel="noopener noreferrer">Aitor Hernández</a></p>
   </footer>
 </body>
 </html>
