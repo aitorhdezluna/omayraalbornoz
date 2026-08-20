@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    :root {
+    :root{
       --brand:#E88C9D;
       --brand-dark:#B95F73;
       --brand-deep:#8F4455;
@@ -112,18 +112,53 @@
     .contact-label{font-family:'Playfair Display',serif;font-size:14px;margin-bottom:.5rem;display:block}
     .contact-value{font-size:12px;color:#222}
 
-    footer{background:linear-gradient(180deg,var(--brand) 0%,var(--brand-dark) 100%);padding:2.75rem 4rem 2.5rem;text-align:center;font-size:12px;color:#111;border-top:1px solid rgba(0,0,0,.08)}
-    .footer-logo{width:96px;height:auto;margin-bottom:1rem;filter:brightness(0);opacity:.9}
-    .footer-links{display:flex;justify-content:center;gap:2rem;margin-top:1.5rem;flex-wrap:wrap}
-    .footer-links a{color:#111;font-size:12px;letter-spacing:.5px;border-bottom:1px solid rgba(17,17,17,.25)}
-    .footer-links a:hover{color:#fff;border-bottom-color:#fff}
-    .footer-credit{margin-top:1.5rem;font-size:11px;color:rgba(17,17,17,.78)}
-    .footer-credit a{font-weight:500;border-bottom:1px solid rgba(17,17,17,.28)}
-    .footer-credit a:hover{color:#fff;border-bottom-color:#fff}
+    footer{background:var(--brand-deep);padding:1.35rem 4rem;color:#fff;border-top:1px solid rgba(255,255,255,.16)}
+    .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:2rem}
+    .footer-logo{width:86px;height:auto;display:block;filter:brightness(0) invert(1)}
+    .footer-copy{font-size:11px;color:#fff;white-space:nowrap}
+    .footer-links{display:flex;align-items:center;gap:1.25rem;white-space:nowrap}
+    .footer-links a{color:#fff;font-size:11px;letter-spacing:.4px;border-bottom:1px solid rgba(255,255,255,.4)}
+    .footer-links a:hover{border-bottom-color:#fff;opacity:.8}
+    .footer-credit{font-size:11px;color:#fff;white-space:nowrap}
+    .footer-credit a{font-weight:500;border-bottom:1px solid rgba(255,255,255,.4)}
+    .footer-credit a:hover{border-bottom-color:#fff;opacity:.8}
 
-    @media(max-width:1024px){.nav-content,.hero-content,.container{padding-left:2rem;padding-right:2rem}.hero-content,.about-content{grid-template-columns:1fr}.events-grid,.testimonials-grid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:1fr}}
-    @media(max-width:768px){.nav-links{gap:1.5rem;font-size:11px}.logo img{width:110px}.hero h1{font-size:36px}.section-header h2,.portfolio-header h2,.testimonials-header h2,.process-header h2,.cta h2{font-size:32px}.about-text h2{font-size:28px}.events-grid,.testimonials-grid,.contact-grid{grid-template-columns:1fr}.credentials{flex-direction:column;gap:1.5rem}.hero{padding-top:140px;min-height:auto}}
-    @media(max-width:480px){.nav-links{display:none}.nav-content{padding:0 1.5rem}.hero-content{padding:0 1.5rem}.hero h1{font-size:28px}.hero-image{height:300px}.section,.cta{padding:3rem 1.5rem}.section-header h2,.portfolio-header h2,.testimonials-header h2,.process-header h2,.cta h2{font-size:24px}.hero-cta{flex-direction:column;align-items:stretch}.btn-primary,.btn-secondary{width:100%;text-align:center}.gallery,.process-grid{grid-template-columns:1fr}}
+    @media(max-width:1024px){
+      .nav-content,.hero-content,.container{padding-left:2rem;padding-right:2rem}
+      .hero-content,.about-content{grid-template-columns:1fr}
+      .events-grid,.testimonials-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .process-grid{grid-template-columns:repeat(2,1fr)}
+      .services-grid{grid-template-columns:1fr}
+      .footer-inner{grid-template-columns:auto 1fr auto;gap:1.25rem}
+      .footer-credit{grid-column:2/4;text-align:right}
+    }
+    @media(max-width:768px){
+      .nav-links{gap:1.5rem;font-size:11px}
+      .logo img{width:110px}
+      .hero h1{font-size:36px}
+      .section-header h2,.portfolio-header h2,.testimonials-header h2,.process-header h2,.cta h2{font-size:32px}
+      .about-text h2{font-size:28px}
+      .events-grid,.testimonials-grid,.contact-grid{grid-template-columns:1fr}
+      .credentials{flex-direction:column;gap:1.5rem}
+      .hero{padding-top:140px;min-height:auto}
+      footer{padding:1.5rem 2rem}
+      .footer-inner{grid-template-columns:1fr;justify-items:center;text-align:center;gap:.8rem}
+      .footer-credit{grid-column:auto;text-align:center}
+      .footer-copy,.footer-credit{white-space:normal}
+    }
+    @media(max-width:480px){
+      .nav-links{display:none}
+      .nav-content{padding:0 1.5rem}
+      .hero-content{padding:0 1.5rem}
+      .hero h1{font-size:28px}
+      .hero-image{height:300px}
+      .section,.cta{padding:3rem 1.5rem}
+      .section-header h2,.portfolio-header h2,.testimonials-header h2,.process-header h2,.cta h2{font-size:24px}
+      .hero-cta{flex-direction:column;align-items:stretch}
+      .btn-primary,.btn-secondary{width:100%;text-align:center}
+      .gallery,.process-grid{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
@@ -232,13 +267,15 @@
   </section>
 
   <footer>
-    <img class="footer-logo" src="assets/logo-omayra-rosado.svg" alt="Omayra Albornoz">
-    <p>© 2026 Omayra Albornoz | Estilista Profesional</p>
-    <div class="footer-links">
-      <a href="https://www.instagram.com/omayraalbornoz.estilista/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://wa.me/34673717726" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <div class="footer-inner">
+      <img class="footer-logo" src="assets/logo-omayra-rosado.svg" alt="Omayra Albornoz">
+      <p class="footer-copy">© 2026 Omayra Albornoz · Estilista Profesional</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/omayraalbornoz.estilista/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://wa.me/34673717726" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <p class="footer-credit">Web realizada por <a href="https://www.aitorhernandez.es" target="_blank" rel="noopener noreferrer">Aitor Hernández</a></p>
     </div>
-    <p class="footer-credit">Web realizada por <a href="https://www.aitorhernandez.es" target="_blank" rel="noopener noreferrer">Aitor Hernández</a></p>
   </footer>
 </body>
 </html>
